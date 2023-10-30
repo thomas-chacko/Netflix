@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./header.css";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import logoImg from "../../assets/pngwing.com (3).png";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
 
@@ -31,10 +32,10 @@ const Header = () => {
           <AiOutlineSearch className="searchIcon" size={30} />
         </div>
 
-        <a className="user" href="/">
+        <Link to='/login' className="user" style={{ textDecoration: "none" }}>
           <AiOutlineUser size={18} />
           Login
-        </a>
+        </Link>
       </header>
     </div>
   );

@@ -1,22 +1,15 @@
-import requests from "./api";
-import Banner from "./components/Banner/Banner";
-import Header from "./components/Header/Header";
 import "./app.css";
-import Row from "./components/Row/Row";
+import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Hero from "./pages/Hero";
 
 const App = () => {
   return (
     <div className="bg-black">
-      <Header />
-      <Banner fetchUrl={requests.fetchNetflixOriginals} />
-      <Row fetchURl={requests.fetchActionMovies} isPoster />
-      <Row title="Trending Movies" fetchURl={requests.fetchTrending} />
-      <Row title="Top Rated Movies" fetchURl={requests.fetchNetflixOriginals} />
-      <Row title="Action Movies" fetchURl={requests.fetchTopRated} />
-      <Row title="Comedy Movies" fetchURl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchURl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchURl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchURl={requests.fetchDocumentaries} />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
   );
 };

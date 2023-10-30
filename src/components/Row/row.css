@@ -1,0 +1,27 @@
+
+.rowContainer {
+    color: white;
+    padding: 10px 10px;
+    margin: 10px 0;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.movie-row{
+    display: flex;
+    overflow-x: scroll;
+}
+.movies {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    margin: 5px 15px;
+    transition: 0.50s;
+}
+.poster{
+    width: 300px;
+    height: 350px;
+}
+/* .movies:hover {
+    transform: scale(1.1);
+} */

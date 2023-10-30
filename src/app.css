@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
